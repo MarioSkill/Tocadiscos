@@ -69,11 +69,11 @@ public class ArbolCancionesPorTitulo extends BSTree<String, Cancion> {
 	 */
 	public ColeccionCanciones cancionesEntreFechas(String fecha1,String fecha2){
 		ColeccionCanciones canciones=new ColeccionCanciones();
-		String[] anio1=fecha1.split("/");
-		String[] anio2=fecha2.split("/");
+		String anio1=fecha1;
+		String anio2=fecha2;
 		
-		int anioI=Integer.parseInt(anio1[2]);
-		int anioF=Integer.parseInt(anio2[2]);
+		int anioI=Integer.parseInt(anio1);
+		int anioF=Integer.parseInt(anio2);
 		if(anioI>anioF){
 			int aux = anioI;
 			anioI = anioF;
@@ -84,7 +84,7 @@ public class ArbolCancionesPorTitulo extends BSTree<String, Cancion> {
 	
 	// Metodo privado que busca las canciones que estan entre 2 fechas
 	private ColeccionCanciones cancionesEntreFechas(BSTNode<String, Cancion> nodo,ColeccionCanciones canciones,int inicio,int fin){
-		int fecha=Integer.parseInt(nodo.element.getFecha().split("/")[2]);
+		int fecha=Integer.parseInt(nodo.element.getFecha());
 		if(fecha>inicio && fecha< fin)
 			canciones.addFirst(new SNode<Cancion>(nodo.element));
 		if( nodo.hasLeft() )
