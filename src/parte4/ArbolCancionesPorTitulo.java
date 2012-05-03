@@ -25,6 +25,19 @@ public class ArbolCancionesPorTitulo extends BSTree<String, Cancion> {
 	public void dibujarArbol(){
 		BSTreeView.draw(this);
 	}
+	/**
+	 * 
+	 * @param nodo, desde el cual queremos empezar a mostrar el arbol , seria nuestro root
+	 * Recorremos de forma recursiva toda nuestra estructura en arbol, como es binario solo tenemos dos opciones o derecha o izquierda.
+	 * Nosotro lo recorremos de izquierda a derecha.
+	 */
+	public void verArbol(BSTNode<String, Cancion> nodo){
+		System.out.println(nodo.element.getTitulo());//Mostramos el primer nodo y cada uno de los siguientes
+		if( nodo.hasLeft() )//si tiene un hijo a la izquirda
+			verArbol(nodo.left);//nos llamamos y nos vamos por la izquierda
+		if( nodo.hasRight() )// este caso es igual pero para la derecha
+			verArbol(nodo.right);
+	}
 	
 	/**
 	 * 
@@ -50,10 +63,12 @@ public class ArbolCancionesPorTitulo extends BSTree<String, Cancion> {
 		}
 		
 		if(returnValue == false){
-			if(buscarCancion(nodo.left, titulo) == false){
-				returnValue = buscarCancion(nodo.left, titulo);
+			if(nodo.hasLeft()){
+				buscarCancion(nodo.left, titulo);
 			}else{
-				returnValue = true;
+				if(nodo.hasRight()){
+					buscarCancion(nodo.right, titulo);	
+				}	
 			}
 		}
 		return returnValue;

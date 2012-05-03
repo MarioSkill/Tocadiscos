@@ -53,18 +53,51 @@ public class ArbolCancionesPorAnio extends BSTree<String, Cancion> {
 	 * @return devuelve verdadero si la encuentra , falso si no.
 	 * Informa si existe una cancion en nuestro arbol.
 	 */
-	public boolean existeCancion(BSTNode<String, Cancion> nodo,String titulo){
-		//este metodo es igual al anterior ver arbol con la excepción de este if donce preguntamos 
-		//por el titulo, si lo encuentra salimos del metodo con true
+	public boolean existeCancion(String titulo){
+		return buscarCancion(root,titulo);
+	}
+	
+	/**
+	 *  
+	 * @param nodo, busca en el mismo y en los hijos de este
+	 * @param titulo, titulo del a cancion a buscar
+	 * @return devuelve true si se encuentra la cancion, en caso contrario false
+	 * Metodo privado que busca una cancion en un nodo y todos sus hijos
+	 */
+	private boolean buscarCancion(BSTNode<String, Cancion> nodo, String titulo){
+	/*	boolean returnValue = false;
+		if(nodo.element.getTitulo().equalsIgnoreCase(titulo)){
+			returnValue = true;
+		}
+		
+		if(returnValue == false){
+			if(nodo.hasLeft()){
+				returnValue = buscarCancion(nodo.left, titulo);
+			}else{
+				if(nodo.hasRight()){
+					returnValue = buscarCancion(nodo.right, titulo);	
+				}	
+			}
+		}
+		
+		
+		return returnValue;*/
+
 		if(nodo.element.getTitulo().equalsIgnoreCase(titulo))
 			return true;
 		
-		if( nodo.hasLeft() )
-			existeCancion(nodo.left,titulo);
-		if( nodo.hasRight() )
-			existeCancion(nodo.right,titulo);
+		if(nodo.hasLeft())
+			if(buscarCancion(nodo.left, titulo)== false){
+				if(nodo.hasRight()){
+					return buscarCancion(nodo.right, titulo);
+				}else{
+					return false;
+				}
+			}else{
+				return true;
+			}
+		return false;
 		
-		return false;//en el caso de que no exista ese titulo.
 	}
 
 	/**

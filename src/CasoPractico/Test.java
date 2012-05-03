@@ -5,8 +5,9 @@ package CasoPractico;
 import parte2.Estanteria;
 import parte2.PilaDiscos;
 import parte3.Tocadisco;
-//import parte4.ArbolCancionesPorAnio;
-//import parte4.ColeccionCanciones;
+import parte4.ArbolCancionesPorAnio;
+import parte4.ArbolCancionesPorTitulo;
+import parte4.ColeccionCanciones;
 
 /**
  * Clase que prueba todos los metodos 
@@ -28,16 +29,6 @@ public class Test {
 	}
 
 	public void test(){
-		/*
-		ColeccionCanciones cCanciones= new ColeccionCanciones();
-		ArbolCancionesPorAnio tree = new ArbolCancionesPorAnio(cCanciones);
-		tree.verArbol(tree.getRoot());
-		tree.dibujarArbol();
-		*/
-		
-
-
-	
 		/*******************PARATE 1*********************************/
 		addDiscos();//Método que inicializa nuestra coleccion de discos
 		probarBusquedas();
@@ -223,7 +214,7 @@ public class Test {
 		SList<Disco> discos;
 		SList<Cancion> cancion;
 
-		discos = coleccionDiscos.buscarPorInterprete("Tina Turner");
+		discos = coleccionDiscos.buscarPorInterprete("Tina Turner");//Preguntar
 		//System.out.println(discos.toString());
 		discos.show();
 
@@ -240,7 +231,7 @@ public class Test {
 	public void probarPilas() {
 		//Pasamos todos nuestros discos de la coleccion de discos a una de nuestras pilas
 		apilarDiscos();
-		buscarDisco("Bustamante");//Buscamos un disco y lo ponemos en la primera posicion de nuestra pila
+		buscarDisco("La flauta mágica (acto 1)");//Buscamos un disco y lo ponemos en la primera posicion de nuestra pila
 	};
 	public void probarEstanteria() {
 
@@ -254,7 +245,20 @@ public class Test {
 		//vacio
 	};
 	public void probarConsultas(){
-		//vacio
+		ColeccionCanciones cCanciones= new ColeccionCanciones(coleccionDiscos);
+		
+		ArbolCancionesPorAnio treeA = new ArbolCancionesPorAnio(cCanciones);
+		ArbolCancionesPorTitulo treeT = new ArbolCancionesPorTitulo(cCanciones);
+		
+		treeA.verArbol(treeA.getRoot());
+		treeA.dibujarArbol();
+		System.out.println("Existe?: "+treeA.existeCancion("What are you doing with a fool like me"));
+		treeA.cancionesEntreFechas("2000", "2010");
+		
+		treeT.verArbol(treeT.getRoot());
+		treeT.dibujarArbol();
+		System.out.println("Existe?: "+treeT.existeCancion("What are you doing with a fool like me"));
+		treeT.cancionesEntreFechas("2000", "2010");
 	}
 
 
@@ -291,27 +295,19 @@ public class Test {
 	 * a nuesta estanteria, siempre y cuando entren.
 	 */
 	public void colocarDiscos( ){
-
-		PilaDiscos auxA= new PilaDiscos();
-		PilaDiscos auxB= new PilaDiscos();
 		int i =0;
-
+		int tamPila = pilaB.size;
+		// Pasamos todos los discos a la pila A ya que si no mas tarde los tendriamos que consultar otra vez
+		while(i < tamPila){
+			pilaA.push(pilaB.pop());	
+			i++;
+		}
+		
+		i =0;
 		while(pilaA.size>0 && ikea.size()<ikea.tamanio){
-			auxA.push(pilaA.pop());
-			ikea.addDisco(auxA.top(),i);
+			ikea.addDisco(pilaA.top(),i);
+			pilaB.push(pilaA.pop());
 			i++;
-		}
-		while(pilaB.size>0 && ikea.size()<ikea.tamanio){
-			auxB.push(pilaB.pop());
-			ikea.addDisco(auxB.top(),i);
-			i++;
-		}
-		//Reorganizamos la pila!
-		while(auxA.size>0){
-			pilaA.push(auxA.pop());
-		}
-		while(auxB.size>0){
-			pilaB.push(auxB.pop());
 		}
 	}
 
@@ -319,52 +315,23 @@ public class Test {
 	 * Colocamos las etiquetas en nuestra estanteria, independientemente de que coincidan con el disco que tienen debajo.
 	 */
 	public void colocarEtiquetas(){
-
-		PilaDiscos auxA= new PilaDiscos();//Podemos usar pilas auxiliares?
-		PilaDiscos auxB= new PilaDiscos();
 		int i =0;
+		int tamPila = pilaB.size;
+		// Pasamos todos los discos a la pila A ya que si no mas tarde los tendriamos que consultar otra vez
+		while(i < tamPila){
+			pilaA.push(pilaB.pop());	
+			i++;
+		}
+		i=0;
 		while(pilaA.size>0 && ikea.size()<ikea.tamanio){
-			auxA.push(pilaA.pop());
-			ikea.addEtiqueta(auxA.top().getTitulo(),i);
+			ikea.addEtiqueta(pilaA.top().getTitulo(),i);
+			pilaB.push(pilaA.pop());
 			i++;
 		}
-		while(pilaB.size>0 && ikea.size()<ikea.tamanio){
-			auxB.push(pilaB.pop());
-			ikea.addEtiqueta(auxB.top().getTitulo(),i);
-			i++;
-		}
-		//Reorganizamos la pila!
-		while(auxA.size>0){
-			pilaA.push(auxA.pop());
-		}
-		while(auxB.size>0){
-			pilaB.push(auxB.pop());
-		}
+		
 	}
 
 	/* *************Metodos parte 3********************************/
-	/**
-	 * 
-	 * @param disco
-	 * @return devuelve un 1 si se encuentra en la pila y un 0 si lo ha dejado en la estantería
-	 * Metodo que intentara colocar nuestro disco en nuestra estantería, si no encuentra el lugar o la estanteria esta llena,
-	 * lo dejara en nuestra pila
-	 */
-	public int colocarDiscos(Disco disco){//quedas
-		int p=0;
-		while(p<ikea.size() && ikea.size()<ikea.tamanio ){
-			if (ikea.getEtiqueta(p).equalsIgnoreCase(disco.getTitulo())){
-				ikea.addDisco(disco, p);
-				return 0;
-			}
-		}
-		if (pilaA.size>pilaB.size)
-			pilaB.push(disco);
-		else
-			pilaA.push(disco);
-
-		return 1;
-	}
 	/**Este metodo 
 	 * 
 	 * @param disco que buscamos
@@ -372,7 +339,7 @@ public class Test {
 	 * En este metodo buscamos en la estanteria buscando nuesto disco, si no aprece
 	 * lo vamos a buscar a nuestas pilas.
 	 */
-	public Disco colocarDisco(Disco disco){
+	public Disco buscarDisco(Disco disco){
 		int p=0;
 
 		while(p<ikea.size()){
@@ -400,6 +367,29 @@ public class Test {
 		return null;
 	}
 
+	/**
+	 * 
+	 * @param disco
+	 * @return devuelve un 1 si se encuentra en la pila y un 0 si lo ha dejado en la estantería
+	 * Metodo que intentara colocar nuestro disco en nuestra estantería, si no encuentra el lugar o la estanteria esta llena,
+	 * lo dejara en nuestra pila
+	 */
+	public int colocarDisco(Disco disco){//quedas
+		int p=0;
+		while(p<ikea.size() && ikea.size()<ikea.tamanio ){
+			if (ikea.getEtiqueta(p).equalsIgnoreCase(disco.getTitulo())){
+				ikea.addDisco(disco, p);
+				return 0;
+			}
+		}
+		if (pilaA.size>pilaB.size)
+			pilaB.push(disco);
+		else
+			pilaA.push(disco);
+
+		return 1;
+	}
+	
 	public void quitarDiscos(){
 		player.pararPlato();
 		SList<Disco> listaDiscos = (SList<Disco>) player.quitarDiscosDelPlato();
