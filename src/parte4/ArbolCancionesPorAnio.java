@@ -40,7 +40,7 @@ public class ArbolCancionesPorAnio extends BSTree<String, Cancion> {
 	 * Nosotro lo recorremos de izquierda a derecha.
 	 */
 	public void verArbol(BSTNode<String, Cancion> nodo){
-		System.out.println(nodo.element.getTitulo());//Mostramos el primer nodo y cada uno de los siguientes
+		System.out.print(" "+nodo.element.getTitulo()+" ");//Mostramos el primer nodo y cada uno de los siguientes
 		if( nodo.hasLeft() )//si tiene un hijo a la izquirda
 			verArbol(nodo.left);//nos llamamos y nos vamos por la izquierda
 		if( nodo.hasRight() )// este caso es igual pero para la derecha

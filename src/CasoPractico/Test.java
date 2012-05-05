@@ -41,7 +41,7 @@ public class Test {
 		probarTocadiscos();//por implementar llamadas
 		/*****************FIN PARTE 3*******************************/
 		/*******************PARTE 4*********************************/
-		probarConsultas();//por implemtar llamadas
+		probarConsultas();
 		/*****************FIN PARTE 4*******************************/
 	}
 
@@ -236,24 +236,24 @@ public class Test {
 		
 		//***************************************Disco 9********************************************************************//
 		interprete = new Interprete("Bisbal", Interprete.tipoInterprete.Solista);
-		disco = new Disco(Disco.Velocidad.LENTO, interprete, "Corazon Latino", "2002");
+		disco = new Disco(Disco.Velocidad.LENTO, interprete, "Corazon Latino", "2012");
 		//***************************************Cara A********************************************************************// 
-		cancion = new Cancion(interprete, "Buleria", Cancion.Genero.POP, "11/03/2012", false, 270);
+		cancion = new Cancion(interprete, "Buleria", Cancion.Genero.POP, "2012", false, 270);
 		disco.addCancion(cancion, 0);
-		cancion = new Cancion(interprete, "Ave María", Cancion.Genero.POP, "11/03/2012", false, 270);
+		cancion = new Cancion(interprete, "Ave María", Cancion.Genero.POP, "2012", false, 270);
 		disco.addCancion(cancion, 0);
-		cancion = new Cancion(interprete, "Dígale", Cancion.Genero.POP, "11/03/2012", false, 270);
+		cancion = new Cancion(interprete, "Dígale", Cancion.Genero.POP, "2012", false, 270);
 		disco.addCancion(cancion, 0);
-		cancion = new Cancion(interprete, "Lloraré las penas", Cancion.Genero.POP, "11/03/2012", false, 270);
+		cancion = new Cancion(interprete, "Lloraré las penas", Cancion.Genero.POP, "2012", false, 270);
 		disco.addCancion(cancion, 0);
 		//***************************************Cara B********************************************************************//
-		cancion = new Cancion(interprete, "Fuiste mía", Cancion.Genero.POP, "11/03/2012", false, 270);
+		cancion = new Cancion(interprete, "Fuiste mía", Cancion.Genero.POP, "2012", false, 270);
 		disco.addCancion(cancion, 1);
-		cancion = new Cancion(interprete, "Lloraré las penas", Cancion.Genero.POP, "11/03/2012", false, 270);
+		cancion = new Cancion(interprete, "Lloraré las penas", Cancion.Genero.POP, "2012", false, 270);
 		disco.addCancion(cancion, 1);
-		cancion = new Cancion(interprete, "Como será", Cancion.Genero.POP, "11/03/2012", false, 270);
+		cancion = new Cancion(interprete, "Como será", Cancion.Genero.POP, "2012", false, 270);
 		disco.addCancion(cancion, 1);
-		cancion = new Cancion(interprete, "Vuelvo a tí", Cancion.Genero.POP, "11/03/2012", false, 270);
+		cancion = new Cancion(interprete, "Vuelvo a tí", Cancion.Genero.POP, "2012", false, 270);
 		disco.addCancion(cancion, 1);
 		//Añadimos el discos
 		coleccionDiscos.addLast(new SNode<Disco>(disco));
@@ -298,15 +298,43 @@ public class Test {
 		ArbolCancionesPorAnio treeA = new ArbolCancionesPorAnio(cCanciones);
 		ArbolCancionesPorTitulo treeT = new ArbolCancionesPorTitulo(cCanciones);
 		
+		System.out.println("\n*********Arbol de Canciones por Anio*********\n");
+		System.out.println("\n*********Imprimimos todos los nodos del Arbol*********");
 		treeA.verArbol(treeA.getRoot());
 		treeA.dibujarArbol();
+		System.out.println("\n\n*********Buscamos una cancion, What are you doing with a fool like me*********\n");
 		System.out.println("Existe?: "+treeA.existeCancion("What are you doing with a fool like me"));
-		treeA.cancionesEntreFechas("2000", "2010");
+		System.out.println("\n*********Canciones entre dos fechas *********\n");
+		ColeccionCanciones cAnioFecha=treeA.cancionesEntreFechas("2000", "2010");
+		if (cAnioFecha.equals(null)){
+			System.out.println("No hay canciones entre los años solocitados");
+		}else{
+			SNode<Cancion> cancion=cAnioFecha.first();
+			while(cancion!=null){
+				System.out.println(cancion.element.getTitulo());
+				cancion=cancion.next;
+			}
+		}
+		System.out.println("\n**********************************************************\n");
 		
+		System.out.println("\n*********Arbol de Canciones por Titulo*********\n");
+		System.out.println("\n*********Imprimimos todos los nodos del Arbol*********");
 		treeT.verArbol(treeT.getRoot());
 		treeT.dibujarArbol();
+		System.out.println("\n\n*********Buscamos una cancion, What are you doing with a fool like me*********\n");
 		System.out.println("Existe?: "+treeT.existeCancion("What are you doing with a fool like me"));
-		treeT.cancionesEntreFechas("2000", "2010");
+		System.out.println("\n*********Canciones entre dos fechas *********\n");
+		ColeccionCanciones ctituloFecha=treeT.cancionesEntreFechas("2000", "2010");
+		if (ctituloFecha.equals(null)){
+			System.out.println("No hay canciones entre los años solocitados");
+		}else{
+			SNode<Cancion> cancion=ctituloFecha.first();
+			while(cancion!=null){
+				System.out.println(cancion.element.getTitulo());
+				cancion=cancion.next;
+			}
+		}
+		System.out.println("\n**********************************************************\n");
 	}
 
 

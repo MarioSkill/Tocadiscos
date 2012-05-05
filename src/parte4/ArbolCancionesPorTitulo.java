@@ -4,8 +4,6 @@ import CasoPractico.Cancion;
 import CasoPractico.SNode;
 
 public class ArbolCancionesPorTitulo extends BSTree<String, Cancion> {
-	//david
-
 	/**
 	 *  Constructor que recibe como parametro una coleccion de canciones y crea el arbol  
 	 */
