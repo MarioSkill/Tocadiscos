@@ -1,0 +1,806 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Tocadiscos by MarioSkill</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+     <link rel="stylesheet" href="stylesheets/css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+		<header>
+        <h1>Tocadiscos</h1>
+        <p>Practica del Toca Discos en java UC3M 1º Ing. Informática </p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/MarioSkill/Tocadiscos" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/MarioSkill/Tocadiscos/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/MarioSkill/Tocadiscos/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h3>Tocadiscos UC3M</h3>
+	<p class="c1 c17 c2 subtitle">
+			<a name="h.tj0pxh3g0q2s"></a><span class="c8">TOCA DISCOS</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c17"><img height="185" src="images/image00.jpg" width="273">
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3 c17">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span class="c4 c25">Mario Vasile Cabezas 100292688</span>
+		</p>
+		<p class="c1">
+			<span class="c4 c25">David Simal Gonzalez 100292642</span>
+		</p>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<hr style="page-break-before:always;display:none;">
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11 subtitle">
+			<a name="h.mzclx8b6844b"></a><span>Indice</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<ol class="c6" start="1">
+			<li class="c5 c1 c11">
+				<span class="c19"><a class="c10" href="#id.pxuk42fdp44n">Fase 1. La colecci&oacute;n de discos</a></span><span class="c19">.</span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c19"><a class="c10" href="#id.ml105sl9jp30">Fase 2. Las pilas de discos y la estanter&iacute;a</a></span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c19"><a class="c10" href="#id.l0tnij2uazq8">Fase 3. El tocadiscos con eje</a></span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c19"><a class="c10" href="#id.rraod2qyiwvq">Fase 4. Consultas sobre canciones</a></span>
+			</li>
+		</ol>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<hr style="page-break-before:always;display:none;">
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p><a href="#" name="id.pxuk42fdp44n"></a>
+		<p class="c1 c11">
+			<span class="c12">Fase 1. La colecci&oacute;n de discos.</span>
+		</p>
+		<p class="c1 c3 c11">
+			<span class="c12"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Implementar la clase Int&eacute;rprete. Usar un tipo enumerado para el tipo de int&eacute;rprete.</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c0">public class </span><span class="c4">Interprete </span><span class="c7 c4">realizada</span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c0">public enum</span><span class="c4">&nbsp;tipoInterprete{</span><span class="c15 c4 c22">Solista, Grupo, Otro,Masculino,Femenino</span><span class="c4">} </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Implementar la clase Canci&oacute;n. Usar un tipo enumerado para el g&eacute;nero, que tenga exactamente los valores que se indican.</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c0">public class </span><span class="c4">Cancion </span><span class="c7 c4">realizada</span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c0">public enum</span><span class="c4">&nbsp;Genero {</span><span class="c15 c4 c22">CLASICA, POP, ROCK, JAZZ, DANCE , OTROS</span><span class="c4">&nbsp;} </span><span class="c7 c4">realizada </span>
+			</li>
+		</ol>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Implementar la clase Cara. Usar una lista enlazada (NO un ArrayList) para la colecci&oacute;n de canciones.</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c0">public class</span><span class="c4">&nbsp;Cara </span><span class="c0">extends </span><span class="c4">SList&lt;Cancion&gt; </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Implementar clase Disco. Usar un array de Java de tama&ntilde;o 2 (new Cara[2]) para las caras. Usar un tipo enumerado para las velocidades.</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c0">public class</span><span class="c4">&nbsp;Disco </span><span class="c7 c4">realizada</span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c15 c4 c22">cara</span><span class="c15 c4">&nbsp;= </span><span class="c0">new </span><span class="c15 c4">Cara[2]; &nbsp;</span><span class="c7 c4">realizada</span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c0">public enum</span><span class="c15 c4">&nbsp;Velocidad {</span><span class="c15 c4 c22">LENTO(33), MEDIO(45), RAPIDO(78)</span><span class="c15 c4">} </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Implementar la clase Colecci&oacute;nDiscos. Usar una lista enlazada para la lista de discos.</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c0">public class</span><span class="c4">&nbsp;ColeccionDiscos </span><span class="c0">extends </span><span class="c4">SList&lt;Disco&gt; </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Dentro de la clase Colecci&oacute;nDiscos, escribir un m&eacute;todo que devuelva el primer disco que tiene un determinado t&iacute;tulo (o null si no lo hubiera).</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c0">public Disco</span><span class="c4">&nbsp;buscarTitulo(String titulo) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Dentro de la clase Colecci&oacute;nDiscos, escribir m&eacute;todos que devuelvan en una lista (sin enumerarpor pantalla):</span>
+		</p>
+		<p class="c1 c18 c11">
+			<span class="c4">Los discos de un determinado int&eacute;rprete.</span>
+		</p>
+		<ol class="c6" start="1">
+			<li class="c14 c1 c11">
+				<span class="c0">public </span><span class="c4">SList&lt;Disco&gt; buscarPorInterprete(String interprete) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c9 c1 c11">
+			<span class="c4">Las canciones de un determinado estilo.</span>
+		</p>
+		<ol class="c6" start="1">
+			<li class="c14 c1 c11">
+				<span class="c0">public </span><span class="c4">SList&lt;Cancion&gt; buscarPorTipoCancion(Cancion.Genero tipo) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c9 c1 c11">
+			<span class="c4">Los discos en los que hay canciones con un determinado t&iacute;tulo.</span>
+		</p>
+		<ol class="c6" start="1">
+			<li class="c14 c1 c11">
+				<span class="c0">public </span><span class="c4">SList&lt;Cancion&gt; buscarPorTituloCancion(String titulo) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Crear un m&eacute;todo en la clase Test que inicialice nuestra Colecci&oacute;nDiscos con unos cuantos discos,cada uno con 3 a 5 canciones por cara para los de 33 rpm y 1 &oacute; 2 por cara para los de 45 rpm. Usar como m&iacute;nimo los que se facilitan en el fichero Excel, y a&ntilde;adir 2 &oacute; 3 discos m&aacute;s. Es posible que, en el fichero Excel, falte o sobre alg&uacute;n dato.</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c0">public void</span><span class="c4">&nbsp;addDiscos() </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<hr style="page-break-before:always;display:none;">
+		<p class="c1 c3 c11">
+			<span class="c12"></span>
+		</p><a href="#" name="id.ml105sl9jp30"></a>
+		<p class="c1 c11">
+			<span class="c12">Fase 2. Las pilas de discos y la estanter&iacute;a</span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Dise&ntilde;ar el TAD de la pila de discos en un interfaz IPilaDiscos (IRecordStack).</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c4">Interfaz IPilaDiscos &nbsp;</span><span class="c7 c4">realizada</span><span class="c15 c4">&nbsp;</span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c0">public interface</span><span class="c4">&nbsp;IPilaDiscos </span><span class="c0">extends</span><span class="c4">&nbsp;IStack&lt;Disco&gt;</span>
+			</li>
+		</ol>
+		<p class="c9 c1 c3 c11">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Dise&ntilde;ar el TAD de la estanter&iacute;a en un interfaz &nbsp;IEstanter&iacute;a (IRecordShelf)</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c4">Interfaz IEstanter&iacute;a &nbsp;</span><span class="c7 c4">realizada</span><span class="c4 c15">&nbsp;</span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c0">public interface</span><span class="c4">&nbsp;IEstanteria&lt;E&gt;</span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c4">Se definen los siguientes m&eacute;todos:</span>
+			</li>
+		</ol>
+		<ol class="c6" start="1">
+			<li class="c14 c1 c2">
+				<span class="c0">public void </span><span class="c4">addEtiqueta(String s,int n) ;</span>
+			</li>
+			<li class="c14 c1 c2">
+				<span class="c0">public </span><span class="c4">String remEtiqueta(</span><span class="c0">int </span><span class="c4">n);</span>
+			</li>
+			<li class="c14 c1 c2">
+				<span class="c0">public </span><span class="c4">CasoPractico.Disco remDisco(</span><span class="c0">int </span><span class="c4">n);</span>
+			</li>
+			<li class="c14 c1 c2">
+				<span class="c0">public void </span><span class="c4">&nbsp;addDisco(E obj,</span><span class="c0">int </span><span class="c4">n);</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c18 c2">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Implementar la clase PilaDiscos (RecordStack).</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c4">Clase PilaDiscos </span><span class="c7 c4">realizada</span>
+			</li>
+			<li class="c5 c1 c11">
+				<span class="c0">public</span><span class="c4">&nbsp;</span><span class="c0">class </span><span class="c4">PilaDiscos &nbsp;</span><span class="c0">extends </span><span class="c4">Stack&lt;Disco&gt; </span><span class="c0">implements </span><span class="c4">IPilaDiscos </span>
+			</li>
+		</ol>
+		<p class="c1 c18 c11">
+			<span class="c4">No a sido necesaria la implementaci&oacute;n de m&eacute;todos, todos los necesarios son heredados.</span>
+		</p>
+		<p class="c1 c11">
+			<span class="c4">Implementar la clase Estanter&iacute;a (RecordShelf).</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1 c11">
+				<span class="c4">Clase Estanter&iacute;a </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c11">
+			<span class="c7 c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c15 c4">M&eacute;todos de la clase mas los que se implementan por la interfaz </span>
+		</p>
+		<ol class="c6" start="1">
+			<li class="c14 c1">
+				<span class="c15 c4">size()</span>
+			</li>
+			<li class="c14 c1">
+				<span class="c4">ordenar()</span>
+			</li>
+			<li class="c14 c1">
+				<span class="c4">compararFechas(String, String)</span>
+			</li>
+			<li class="c14 c1">
+				<span class="c4">compararNombres(String, String)</span>
+			</li>
+			<li class="c14 c1">
+				<span class="c4">ordenarDiscos() </span><span class="c15 c4 c16">M&eacute;todo privado </span>
+			</li>
+			<li class="c14 c1">
+				<span class="c4">interprete(String) </span><span class="c15 c4 c16">M&eacute;todo privado </span>
+			</li>
+			<li class="c14 c1">
+				<span class="c4">fecha(String)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c15 c4 c16">M&eacute;todo privado </span>
+			</li>
+		</ol>
+		<p class="c1 c3 c18">
+			<span class="c4"></span>
+		</p>
+		<p class="c1">
+			<span class="c4">A&ntilde;adir la estanter&iacute;a y las dos pilas de discos a la clase</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1">
+				<span class="c4">PilaDiscos pilaA = </span><span class="c0">new </span><span class="c4">PilaDiscos(); </span>
+			</li>
+			<li class="c5 c1">
+				<span class="c4">PilaDiscos pilaB = </span><span class="c0">new </span><span class="c4">PilaDiscos();</span>
+			</li>
+			<li class="c5 c1">
+				<span class="c4">Estanteria ikea = </span><span class="c0">new </span><span class="c4">Estanteria(16);</span>
+			</li>
+		</ol>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3 c2">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c2">
+			<span class="c4">Ponga inicialmente todos los discos de nuestra colecci&oacute;n sobre una de las dos </span>
+		</p>
+		<p class="c1 c2">
+			<span class="c4">pilas.</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1">
+				<span class="c0">public void</span><span class="c4">&nbsp;apilarDiscos(); </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c2">
+			<span class="c4">Busque un disco con un nombre determinado en las dos pilas, dej&aacute;ndolo en la </span>
+		</p>
+		<p class="c1 c2">
+			<span class="c4">cima de la pila 1 si lo encuentra. S&oacute;lo se podr&aacute;n usar las dos pilas, pasando </span>
+		</p>
+		<p class="c1 c2">
+			<span class="c4">discos de una a otra.</span>
+		</p>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1">
+				<span class="c0">public void </span><span class="c4">buscarDisco(&quot;</span><span class="c4 c22">Bustamante&quot;</span><span class="c4">); </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c2">
+			<span class="c4">Ponga los discos de las pilas (tantos como pueda) en la estanter&iacute;a. Primero </span>
+		</p>
+		<p class="c1 c2">
+			<span class="c4">pondr&aacute; los de la pila 1, y luego los de la 2. </span>
+		</p>
+		<p class="c1">
+			<span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1">
+				<span class="c0">public void </span><span class="c4">colocarDiscos(); </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c9 c1 c3">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c2">
+			<span class="c4">Coloque las etiquetas en la estanter&iacute;a. A cada casilla se le pondr&aacute; la etiqueta </span>
+		</p>
+		<p class="c1 c2">
+			<span class="c4">del disco que contiene en ese momento.</span>
+		</p>
+		<p class="c1">
+			<span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1">
+				<span class="c0">public void </span><span class="c4">colocarEtiquetas(); </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<p class="c1">
+			<span class="c15 c4 c24">Esta &uacute;ltima parte se hace desde el mismo m&eacute;todo , primero hacemos lo que pide el primer punto , ordenamos las etiquetas sin tocar el array de discos y despu&eacute;s hacemos el segundo punto de sacar los discos y meterlos donde indiquen las etiquetas.</span>
+		</p>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<p class="c1">
+			<span class="c4">&nbsp;Ordene las etiquetas &nbsp;(no los discos) &nbsp;por orden alfab&eacute;tico de int&eacute;rprete, y </span>
+		</p>
+		<p class="c1">
+			<span class="c4">dentro de los del mismo int&eacute;rprete, por orden del a&ntilde;o de edici&oacute;n. Usar un </span>
+		</p>
+		<p class="c1">
+			<span class="c4">algoritmo de ordenaci&oacute;n por burbuja, pero SIN crear un nuevo array auxiliar.</span>
+		</p>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1">
+				<span class="c4">ikea.ordenar(); </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<p class="c1">
+			<span class="c4">&nbsp;Usando una o las dos pilas, extraiga los discos de la estanter&iacute;a y los vuelva a </span>
+		</p>
+		<p class="c1">
+			<span class="c4">colocar correctamente, teniendo en cuenta la etiqueta.</span>
+		</p>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1">
+				<span class="c4">ikea.ordenar(); &rarr; ordenarDiscos() M&eacute;todo privado que hace lo que se pide en este punto &nbsp;y es llamado desde ikea.ordenar()</span>
+			</li>
+		</ol>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<hr style="page-break-before:always;display:none;">
+		<p class="c1 c3">
+			<span></span>
+		</p><a href="#" name="id.l0tnij2uazq8"></a>
+		<p class="c1">
+			<span class="c12">Fase 3. El tocadiscos con eje</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Ampliar la clase Cara con varios m&eacute;todos que ser&aacute;n de utilidad m&aacute;s adelante:</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c18">
+			<span>Un m&eacute;todo que devuelva una canci&oacute;n con un determinado t&iacute;tulo, o null si no la encuentra.</span>
+		</p>
+		<p class="c1 c3 c18">
+			<span></span>
+		</p>
+		<p class="c9 c1">
+			<span>Un m&eacute;todo que calcule la duraci&oacute;n total de la cara.</span>
+		</p>
+		<p class="c1 c3 c9">
+			<span></span>
+		</p>
+		<p class="c9 c1">
+			<span>Un m&eacute;todo que indique la posici&oacute;n en la que debemos colocar la aguja (de 0 a 100) para</span>
+		</p>
+		<p class="c9 c1">
+			<span>escuchar una canci&oacute;n contenida en dicha cara.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c9 c1">
+			<span>Un m&eacute;todo que indique qu&eacute; canci&oacute;n se escuchar&aacute; con la aguja colocada en una posici&oacute;n</span>
+		</p>
+		<p class="c9 c1">
+			<span>entre 0 y 100.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Incorporar al proyecto los interfaces IEje, IPlato, IAguja e ITocadiscos que se facilitan m&aacute;s</span>
+		</p>
+		<p class="c1">
+			<span>adelante.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Implementar la clase Eje. Decidir qu&eacute; estructura de datos usar para la colecci&oacute;n de discos que</span>
+		</p>
+		<p class="c1">
+			<span>est&aacute;n preparados para caer. Indicar y justificar brevemente la complejidad de las operaciones1.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Implementar la clase Plato. Decidir qu&eacute; estructura de datos usar para representar la colecci&oacute;n de discos que ya est&aacute;n sobre el plato. Indicar y justificar brevemente la complejidad de las</span>
+		</p>
+		<p class="c1">
+			<span>operaciones.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Implementar la clase Aguja.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Implementar la clase Tocadiscos.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Crear un m&eacute;todo en la clase Test que, dado un disco (no un t&iacute;tulo, sino el disco), lo busque en la</span>
+		</p>
+		<p class="c1">
+			<span>estanter&iacute;a y en las pilas, y devuelva el disco si lo ha encontrado, o null si no lo encuentra. Al</span>
+		</p>
+		<p class="c1">
+			<span>t&eacute;rmino de este m&eacute;todo, el disco se habr&aacute; extra&iacute;do del lugar donde se encontrara.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Crear un m&eacute;todo en la clase Test que, dado un disco, lo coloque en su casilla adecuada, o en una de las pilas si no encuentra la casilla. Un m&eacute;todo parecido a este ya se cre&oacute; en la fase anterior para todos los discos que estaban en una pila.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Crear un m&eacute;todo en la clase Test que realice todas las operaciones necesarias para quitar los discos que est&eacute;n en el tocadiscos, y colocarlos en su sitio en la estanter&iacute;a, o sobre una de las pilas si es que</span>
+		</p>
+		<p class="c1">
+			<span>no tienen sitio en la estanter&iacute;a. Este m&eacute;todo deber&aacute; tener en cuenta todos los casos posibles (que el tocadiscos est&eacute; en marcha, etc.) de forma que en ning&uacute;n caso pueda producirse un error. Se usar&aacute; el m&eacute;todo anterior para colocar los discos.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span>Crear un m&eacute;todo en la clase Test que, dado el t&iacute;tulo de una canci&oacute;n, la toque. Para ello, deber&aacute; en primer lugar llamar al m&eacute;todo anterior para vaciar el tocadiscos, luego saber cu&aacute;l es el disco que contiene la canci&oacute;n (y en qu&eacute; cara est&aacute;), luego buscarlo en la estanter&iacute;a o en las pilas (ya tenemos un m&eacute;todo para esto), luego colocarlo sobre el eje, dejarlo caer sobre el plato, poner en marcha el tocadiscos tras fijar la velocidad adecuada, desaparcar la aguja, colocarla la posici&oacute;n adecuada, y bajarla.</span>
+		</p>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<hr style="page-break-before:always;display:none;">
+		<p class="c1 c3">
+			<span></span>
+		</p><a href="#" name="id.rraod2qyiwvq"></a>
+		<p class="c1">
+			<span class="c12">Fase 4. Consultas sobre canciones</span>
+		</p>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<p class="c1">
+			<span>Crear una clase Colecci&oacute;nCanciones. Usar herencia a partir de una lista enlazada.</span>
+		</p>
+		<ol class="c13" start="2">
+			<li class="c5 c1">
+				<span class="c0">public class</span><span class="c4">&nbsp;ColeccionCanciones extends SList&lt;Cancion&gt; </span><span class="c4 c7">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3">
+			<span></span>
+		</p>
+		<p class="c1">
+			<span class="c4">A&ntilde;adir a la clase Colecci&oacute;nCanciones:</span>
+		</p>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1">
+				<span class="c4">Un constructor que cree la lista a partir de una colecci&oacute;n de discos.</span>
+			</li>
+		</ol>
+		<ol class="c6" start="1">
+			<li class="c14 c1">
+				<span class="c0">public</span><span class="c4">&nbsp;ColeccionCanciones(ColeccionDiscos discos) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<ol class="c13" start="2">
+			<li class="c1 c5">
+				<span class="c4">Un m&eacute;todo que muestre por pantalla todo el contenido de la colecci&oacute;n.</span>
+			</li>
+		</ol>
+		<ol class="c6" start="1">
+			<li class="c14 c1">
+				<span class="c0">public </span><span class="c4">&nbsp;void show() </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<ol class="c13" start="3">
+			<li class="c5 c1">
+				<span class="c4">Un m&eacute;todo que devuelva otra lista de canciones que contenga las que fueron interpretadas por determinado int&eacute;rprete.</span>
+			</li>
+		</ol>
+		<ol class="c6" start="1">
+			<li class="c14 c1">
+				<span class="c0">public</span><span class="c4">&nbsp; SList&lt;Cancion&gt; cancionesPorInterprete(Interprete interprete) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<ol class="c13" start="4">
+			<li class="c5 c1">
+				<span class="c4">Crear las clases ArbolCancionesPorTitulo y ArbolCancionesPorA&ntilde;o. Usar herencia a partir de un &aacute;rbol binario de b&uacute;squeda.</span>
+			</li>
+		</ol>
+		<ol class="c6" start="1">
+			<li class="c14 c1">
+				<span class="c0">public class</span><span class="c4">&nbsp;ArbolCancionesPorAnio extends BSTree&lt;String, Cancion&gt; </span><span class="c7 c4">realizada</span>
+			</li>
+			<li class="c14 c1">
+				<span class="c0">public class</span><span class="c4">&nbsp;ArbolCancionesPorTitulo extends BSTree&lt;String, Cancion&gt; </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<p class="c1">
+			<span class="c4">A&ntilde;adir en AMBAS clases ArbolCancionesPorTitulo y ArbolCancionesPorA&ntilde;o:</span>
+		</p>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<ol class="c13" start="1">
+			<li class="c5 c1">
+				<span class="c4">Un constructor que cree la lista a partir de una colecci&oacute;n de canciones.</span>
+			</li>
+		</ol>
+		<ol class="c6" start="1">
+			<li class="c14 c1">
+				<span class="c0">public </span><span class="c4">ArbolCancionesPorAnio(ColeccionCanciones canciones) </span><span class="c7 c4">realizada</span>
+			</li>
+			<li class="c1 c14">
+				<span class="c0">public </span><span class="c4">ArbolCancionesPorTitulo(ColeccionCanciones col) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c18">
+			<span class="c4"></span>
+		</p>
+		<ol class="c13" start="2">
+			<li class="c5 c1">
+				<span class="c4">Un m&eacute;todo muestre por pantalla todo el contenido de estos &aacute;rboles de canciones por su orden correspondiente. </span><span class="c4 c20">*</span>
+			</li>
+		</ol>
+		<ol class="c6" start="3">
+			<li class="c14 c1">
+				<span class="c0">public void </span><span class="c4">verArbol(BSTNode&lt;String, Cancion&gt; nodo) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3">
+			<span class="c4"></span>
+		</p>
+		<ol class="c13" start="3">
+			<li class="c5 c1">
+				<span class="c4">Un m&eacute;todo que indique si existe una canci&oacute;n con un determinado t&iacute;tulo.</span><span class="c20 c4">*</span>
+			</li>
+		</ol>
+		<ol class="c6" start="4">
+			<li class="c14 c1">
+				<span class="c0">public boolean </span><span class="c4">existeCancion(String titulo) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1 c3 c18">
+			<span class="c4"></span>
+		</p>
+		<ol class="c13" start="4">
+			<li class="c5 c1">
+				<span class="c4">Un m&eacute;todo que devuelva una colecci&oacute;n de canciones que contenga con las canciones que fueron grabadas entre dos a&ntilde;os determinados.</span><span class="c20 c4">*</span>
+			</li>
+		</ol>
+		<ol class="c6" start="5">
+			<li class="c14 c1">
+				<span class="c0">public </span><span class="c4">ColeccionCanciones </span><span class="c4">cancionesEntreFechas(String fecha1,String fecha2) </span><span class="c7 c4">realizada</span>
+			</li>
+		</ol>
+		<p class="c1">
+			<span class="c4">Recordar que TODOS los m&eacute;todos deben estar en AMBAS clases.</span>
+		</p>
+		<p class="c1">
+			<span class="c4">&nbsp;</span><span class="c20 c4">* </span><span class="c15 c4 c21">(asteriscos) </span><span class="c4">indican que los metodos tienes el mismo nombre en las dos clases.</span>
+		</p>
+
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/MarioSkill">MarioSkill</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
