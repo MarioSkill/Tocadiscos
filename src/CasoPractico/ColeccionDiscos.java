@@ -4,7 +4,6 @@ package CasoPractico;
 public class ColeccionDiscos extends SList<Disco> {
 	
 	 public ColeccionDiscos(){
-		//Disco SDisco = new Disco();
 	}
 	
 	
