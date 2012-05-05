@@ -209,13 +209,61 @@ public class Test {
 		disco.addCancion(cancion, 1);
 		//Añadimos el disco
 		coleccionDiscos.addLast(new SNode<Disco>(disco));
+		
+		//***************************************Disco 8********************************************************************//
+		interprete = new  Interprete("David Guetta", Interprete.tipoInterprete.Otro);
+		disco = new Disco(Disco.Velocidad.RAPIDO,interprete, "One love", "2002");
+		//***************************************Cara A********************************************************************//
+		cancion = new Cancion(interprete, "When Love Takes Over", Cancion.Genero.DANCE,"2009", false, 311);
+		disco.addCancion(cancion, 0);
+		cancion = new Cancion(interprete, "Gettin' Over", Cancion.Genero.DANCE,"2009", false, 302);
+		disco.addCancion(cancion, 0);
+		cancion = new Cancion(interprete, "Sexy Bitch", Cancion.Genero.DANCE, "2009", false, 316);
+		disco.addCancion(cancion, 0);
+		cancion = new Cancion(interprete, "Memories", Cancion.Genero.DANCE, "2009", false, 336);
+		disco.addCancion(cancion, 0);
+		//***************************************Cara B********************************************************************//
+		cancion = new Cancion(interprete, "On the Dancefloor", Cancion.Genero.DANCE, "2009", false, 357);
+		disco.addCancion(cancion, 1);
+		cancion = new Cancion(interprete, "It's the Way You Love Me", Cancion.Genero.DANCE, "2009", false, 143);
+		disco.addCancion(cancion, 1);
+		cancion = new Cancion(interprete, "Missing You", Cancion.Genero.DANCE, "2009", false, 308);
+		disco.addCancion(cancion, 1);
+		cancion = new Cancion(interprete, "Choose", Cancion.Genero.DANCE, "2009", false, 358);
+		disco.addCancion(cancion, 1);
+		//Añadimos el disco
+		coleccionDiscos.addLast(new SNode<Disco>(disco));
+		
+		//***************************************Disco 9********************************************************************//
+		interprete = new Interprete("Bisbal", Interprete.tipoInterprete.Solista);
+		disco = new Disco(Disco.Velocidad.LENTO, interprete, "Corazon Latino", "2002");
+		//***************************************Cara A********************************************************************// 
+		cancion = new Cancion(interprete, "Buleria", Cancion.Genero.POP, "11/03/2012", false, 270);
+		disco.addCancion(cancion, 0);
+		cancion = new Cancion(interprete, "Ave María", Cancion.Genero.POP, "11/03/2012", false, 270);
+		disco.addCancion(cancion, 0);
+		cancion = new Cancion(interprete, "Dígale", Cancion.Genero.POP, "11/03/2012", false, 270);
+		disco.addCancion(cancion, 0);
+		cancion = new Cancion(interprete, "Lloraré las penas", Cancion.Genero.POP, "11/03/2012", false, 270);
+		disco.addCancion(cancion, 0);
+		//***************************************Cara B********************************************************************//
+		cancion = new Cancion(interprete, "Fuiste mía", Cancion.Genero.POP, "11/03/2012", false, 270);
+		disco.addCancion(cancion, 1);
+		cancion = new Cancion(interprete, "Lloraré las penas", Cancion.Genero.POP, "11/03/2012", false, 270);
+		disco.addCancion(cancion, 1);
+		cancion = new Cancion(interprete, "Como será", Cancion.Genero.POP, "11/03/2012", false, 270);
+		disco.addCancion(cancion, 1);
+		cancion = new Cancion(interprete, "Vuelvo a tí", Cancion.Genero.POP, "11/03/2012", false, 270);
+		disco.addCancion(cancion, 1);
+		//Añadimos el discos
+		coleccionDiscos.addLast(new SNode<Disco>(disco));
+
 	}
 	public void probarBusquedas() {
 		SList<Disco> discos;
 		SList<Cancion> cancion;
 
-		discos = coleccionDiscos.buscarPorInterprete("Tina Turner");//Preguntar
-		//System.out.println(discos.toString());
+		discos = coleccionDiscos.buscarPorInterprete("Tina Turner");
 		discos.show();
 
 		cancion = coleccionDiscos.buscarPorTituloCancion("Nothing compares 2U");
