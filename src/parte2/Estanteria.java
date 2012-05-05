@@ -139,7 +139,7 @@ public class Estanteria implements IEstanteria<Disco>  {
 			if (this.etiqueta[i].equalsIgnoreCase(p1.top().getTitulo())){
 				this.addDisco(p1.pop(), i);
 			}else{// si no lo pasaos a la segunda pila
-				p2.push(p1.pop());
+			//	p2.push(p1.pop());
 			}
 			//Si nuestra pila 1 se queda vacia pasams los disco de la pila 2 a la 1
 			if (p1.size==0 && p2.size>0){

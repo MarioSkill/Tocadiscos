@@ -209,7 +209,11 @@ public class Test {
 		disco.addCancion(cancion, 1);
 		//Añadimos el disco
 		coleccionDiscos.addLast(new SNode<Disco>(disco));
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> master
 		//***************************************Disco 8********************************************************************//
 		interprete = new  Interprete("David Guetta", Interprete.tipoInterprete.Otro);
 		disco = new Disco(Disco.Velocidad.RAPIDO,interprete, "One love", "2002");
@@ -233,7 +237,11 @@ public class Test {
 		disco.addCancion(cancion, 1);
 		//Añadimos el disco
 		coleccionDiscos.addLast(new SNode<Disco>(disco));
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> master
 		//***************************************Disco 9********************************************************************//
 		interprete = new Interprete("Bisbal", Interprete.tipoInterprete.Solista);
 		disco = new Disco(Disco.Velocidad.LENTO, interprete, "Corazon Latino", "2012");
@@ -294,10 +302,17 @@ public class Test {
 	};
 	public void probarConsultas(){
 		ColeccionCanciones cCanciones= new ColeccionCanciones(coleccionDiscos);
+<<<<<<< HEAD
 
 		ArbolCancionesPorAnio treeA = new ArbolCancionesPorAnio(cCanciones);
 		ArbolCancionesPorTitulo treeT = new ArbolCancionesPorTitulo(cCanciones);
 
+=======
+		
+		ArbolCancionesPorAnio treeA = new ArbolCancionesPorAnio(cCanciones);
+		ArbolCancionesPorTitulo treeT = new ArbolCancionesPorTitulo(cCanciones);
+		
+>>>>>>> master
 		System.out.println("\n*********Arbol de Canciones por Anio*********\n");
 		System.out.println("\n*********Imprimimos todos los nodos del Arbol*********");
 		treeA.verArbol(treeA.getRoot());
@@ -316,7 +331,11 @@ public class Test {
 			}
 		}
 		System.out.println("\n**********************************************************\n");
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> master
 		System.out.println("\n*********Arbol de Canciones por Titulo*********\n");
 		System.out.println("\n*********Imprimimos todos los nodos del Arbol*********");
 		treeT.verArbol(treeT.getRoot());
@@ -378,7 +397,11 @@ public class Test {
 			pilaA.push(pilaB.pop());	
 			i++;
 		}
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> master
 		i =0;
 		while(pilaA.size>0 && ikea.size()<ikea.tamanio){
 			ikea.addDisco(pilaA.top(),i);
@@ -404,7 +427,11 @@ public class Test {
 			pilaB.push(pilaA.pop());
 			i++;
 		}
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> master
 	}
 
 	/* *************Metodos parte 3********************************/
@@ -465,7 +492,11 @@ public class Test {
 
 		return 1;
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> master
 	public void quitarDiscos(){
 		player.pararPlato();
 		SList<Disco> listaDiscos = (SList<Disco>) player.quitarDiscosDelPlato();
