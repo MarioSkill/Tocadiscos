@@ -1,106 +1,174 @@
-
-			@import url('https://themes.googleusercontent.com/fonts/css?kit=wInaRm7iMVclAFYj6kV4-YA__KZsfIZODdLcms0NRyQ');
+	@import url('https://themes.googleusercontent.com/fonts/css?kit=chteh0fSOiSrmusp8u43YABE3cQJfIObR6poRzetMS3oEPkLX0LKzlZul7Zr7TG2');
 			ol {
 				margin: 0;
 				padding: 0
 			}
 			.c12 {
+				color: #f6b26b;
+				font-size: 18pt;
+				font-style: italic;
+				background-color: #ffffff;
+				font-family: "Consolas"
+			}
+			.c19 {
+				color: #f6b26b;
+				font-size: 18pt;
+				font-style: italic;
+				font-family: "Consolas";
+				font-weight: bold
+			}
+			.c26 {
+				color: #b02b2c;
+				font-size: 12pt;
+				background-color: #ffffff;
+				font-family: "Open Sans"
+			}
+			.c28 {
+				color: #f6b26b;
+				font-size: 18pt;
+				font-family: "Consolas";
+				font-weight: bold
+			}
+			.c7 {
 				color: #0b5394;
 				font-size: 14pt;
 				font-style: italic;
-				font-family: "Open Sans";
-				text-decoration: underline
-			}
-			.c6 {
-				list-style-type: circle;
-				margin: 0;
-				padding: 0
-			}
-			.c19 {
-				color: #0b5394;
-				font-size: 14pt;
 				font-family: "Open Sans"
 			}
-			.c13 {
-				list-style-type: disc;
-				margin: 0;
-				padding: 0
-			}
-			.c23 {
-				max-width: 468pt;
-				background-color: #ffffff;
-				padding: 72pt 72pt 72pt 72pt
-			}
-			.c20 {
+			.c34 {
 				color: #980000;
 				font-size: 12pt;
 				font-weight: bold
 			}
-			.c14 {
-				padding-left: 0pt;
-				margin-left: 72pt
+			.c17 {
+				list-style-type: circle;
+				margin: 0;
+				padding: 0
 			}
-			.c7 {
-				color: #38761d;
-				font-style: italic
+			.c2 {
+				list-style-type: disc;
+				margin: 0;
+				padding: 0
+			}
+			.c30 {
+				color: #b02b2c;
+				font-size: 12pt;
+				font-family: "Open Sans"
 			}
 			.c0 {
-				color: #741b47;
-				font-family: "Ubuntu"
+				line-height: 1.5;
+				height: 11pt;
+				direction: ltr
 			}
-			.c10 {
+			.c9 {
+				padding-left: 0pt;
+				direction: ltr;
+				margin-left: 72pt
+			}
+			.c42 {
+				max-width: 468pt;
+				background-color: #ffffff;
+				padding: 72pt 72pt 72pt 72pt
+			}
+			.c33 {
+				color: #f6b26b;
+				font-family: "Consolas"
+			}
+			.c22 {
 				color: inherit;
 				text-decoration: inherit
 			}
-			.c5 {
-				padding-left: 0pt;
-				margin-left: 36pt
-			}
-			.c21 {
-				color: #980000;
-				font-size: 12pt
-			}
-			.c9 {
-				text-indent: 36pt
-			}
-			.c1 {
-				direction: ltr
-			}
-			.c15 {
+			.c4 {
+				color: #38761d;
 				font-style: italic
 			}
-			.c4 {
-				font-family: "Ubuntu"
-			}
-			.c3 {
-				height: 11pt
-			}
-			.c17 {
-				text-align: center
-			}
-			.c25 {
-				font-size: 14pt
-			}
-			.c16 {
-				color: #a61c00
-			}
 			.c18 {
-				margin-left: 36pt
+				color: #3c78d8;
+				font-style: italic
 			}
 			.c11 {
+				padding-left: 0pt;
 				line-height: 1.5
 			}
-			.c24 {
-				color: #85200c
+			.c27 {
+				color: #a61c00;
+				font-weight: bold
 			}
-			.c2 {
-				line-height: 1.0
+			.c3 {
+				height: 11pt;
+				direction: ltr
+			}
+			.c16 {
+				text-align: justify
+			}
+			.c14 {
+				padding-left: 0pt
+			}
+			.c20 {
+				line-height: 1.5
+			}
+			.c5 {
+				text-align: center
+			}
+			.c37 {
+				color: #3c78d8
+			}
+			.c10 {
+				direction: ltr
+			}
+			.c21 {
+				font-style: italic
+			}
+			.c32 {
+				color: #cccccc
+			}
+			.c6 {
+				margin-left: 36pt
 			}
 			.c8 {
+				color: #741b47
+			}
+			.c35 {
+				color: #1155cc
+			}
+			.c39 {
+				color: #980000
+			}
+			.c31 {
+				color: #a61c00
+			}
+			.c40 {
+				color: #85200c
+			}
+			.c13 {
 				font-size: 36pt
 			}
-			.c22 {
-				color: #3c78d8
+			.c23 {
+				text-indent: 36pt
+			}
+			.c36 {
+				font-size: 14pt
+			}
+			.c24 {
+				text-decoration: underline
+			}
+			.c25 {
+				color: #999999
+			}
+			.c29 {
+				font-size: 18pt
+			}
+			.c41 {
+				font-size: 12pt
+			}
+			.c15 {
+				line-height: 1.0
+			}
+			.c1 {
+				font-family: "Ubuntu"
+			}
+			.c38 {
+				font-weight: bold
 			}
 			.title {
 				padding-top: 24pt;
