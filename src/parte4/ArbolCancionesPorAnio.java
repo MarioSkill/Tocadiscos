@@ -131,7 +131,7 @@ public class ArbolCancionesPorAnio extends BSTree<String, Cancion> {
 	 * El modo de recorrer el arbol es la misma forma que hemos hemos utilizado anteriormente 
 	 */
 	private ColeccionCanciones cancionesEntreFechas(BSTNode<String, Cancion> nodo,ColeccionCanciones canciones,int inicio,int fin){
-		int fecha=Integer.parseInt(nodo.element.getFecha());
+		int fecha=Integer.parseInt(nodo.key);
 		if(fecha>inicio && fecha< fin)
 			canciones.addFirst(new SNode<Cancion>(nodo.element));
 		if( nodo.hasLeft() )

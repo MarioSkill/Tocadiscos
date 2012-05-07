@@ -56,19 +56,17 @@ public class ArbolCancionesPorTitulo extends BSTree<String, Cancion> {
 	 */
 	private boolean buscarCancion(BSTNode<String, Cancion> nodo, String titulo){
 		boolean returnValue = false;
-		if(nodo.element.getTitulo().equalsIgnoreCase(titulo)){
-			returnValue = true;
+		// Binary Search, descarta una mitad del subarbol nodo en cada pasada
+		if(nodo != null ){
+			if(nodo.key.equalsIgnoreCase(titulo) == true){
+				returnValue = true;
+			}else if(nodo.key.compareTo(titulo)>1){
+				returnValue = buscarCancion(nodo.right, titulo);
+			}else{
+				returnValue = buscarCancion(nodo.left, titulo);
+			}	
 		}
 		
-		if(returnValue == false){
-			if(nodo.hasLeft()){
-				buscarCancion(nodo.left, titulo);
-			}else{
-				if(nodo.hasRight()){
-					buscarCancion(nodo.right, titulo);	
-				}	
-			}
-		}
 		return returnValue;
 	}
 	
@@ -98,12 +96,17 @@ public class ArbolCancionesPorTitulo extends BSTree<String, Cancion> {
 	// Metodo privado que busca las canciones que estan entre 2 fechas
 	private ColeccionCanciones cancionesEntreFechas(BSTNode<String, Cancion> nodo,ColeccionCanciones canciones,int inicio,int fin){
 		int fecha=Integer.parseInt(nodo.element.getFecha());
-		if(fecha>inicio && fecha< fin)
+		if(fecha>inicio && fecha< fin){
 			canciones.addFirst(new SNode<Cancion>(nodo.element));
-		if( nodo.hasLeft() )
+		}
+		
+		if(nodo.hasLeft()){
 			cancionesEntreFechas(nodo.left,canciones,inicio,fin);
-		if( nodo.hasRight() )
+		}
+		
+		if(nodo.hasRight()){
 			cancionesEntreFechas(nodo.right,canciones,inicio,fin);
+		}
 		
 		return canciones;
 	}

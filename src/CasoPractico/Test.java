@@ -290,7 +290,27 @@ public class Test {
 		ikea.ordenar();
 	};
 	public void probarTocadiscos() {
-		//vacio
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("PARTE 3: Tocadiscos");
+		System.out.println();
+		Tocadisco tocadisco = new Tocadisco();
+		tocadisco.ponerDiscoEnEje(ikea.getDisco(1), 1);
+		tocadisco.ponerDiscoEnEje(ikea.getDisco(2), 1);
+		tocadisco.ponerDiscoEnEje(ikea.getDisco(3), 1);
+		tocadisco.dejarCaerDiscoDeEje();
+		tocadisco.arrancarPlato();
+		tocadisco.desaparcarAguja();
+		tocadisco.bajarAguja();
+		Cancion c = tocadisco.obtenerCancionSonando();
+		System.out.println("Sonando: "+c.getInterprete().toString()+" -> "+c.getTitulo().toString());
+		tocadisco.fijarPosicionAguja((float) 76.8);
+		c = tocadisco.obtenerCancionSonando();
+		System.out.println("Sonando: "+c.getInterprete().toString()+" -> "+c.getTitulo().toString());
+		System.exit(0);
+		
+		
 	};
 	public void probarConsultas(){
 		ColeccionCanciones cCanciones= new ColeccionCanciones(coleccionDiscos);
@@ -417,7 +437,7 @@ public class Test {
 	 */
 	public Disco buscarDisco(Disco disco){
 		int p=0;
-
+		System.out.println(ikea.size());
 		while(p<ikea.size()){
 			if (ikea.getDisco(p).equals(disco)){
 				//ikea.remEtiqueta(p); //debemos eliminar la etiqueta? yo creo q no...
@@ -450,7 +470,7 @@ public class Test {
 	 * Metodo que intentara colocar nuestro disco en nuestra estantería, si no encuentra el lugar o la estanteria esta llena,
 	 * lo dejara en nuestra pila
 	 */
-	public int colocarDisco(Disco disco){//quedas
+	public int colocarDisco(Disco disco){
 		int p=0;
 		while(p<ikea.size() && ikea.size()<ikea.tamanio ){
 			if (ikea.getEtiqueta(p).equalsIgnoreCase(disco.getTitulo())){
@@ -478,9 +498,10 @@ public class Test {
 		}else{
 			System.out.println("No hay discos que colocar");
 		}
-
+	
 	}
-
+	
+	
 	public void tocarCancion(String cancion){
 		quitarDiscos();
 		int tamEstanteria = ikea.size();
